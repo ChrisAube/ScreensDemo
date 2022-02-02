@@ -1,6 +1,6 @@
 import React from "react";
-import Options from "./screens/Options";
+import Navigation from "./components/Navigation";
 
 export default () => {
-  return <Options />;
+  return <Navigation />;
 };

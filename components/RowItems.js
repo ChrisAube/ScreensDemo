@@ -26,9 +26,9 @@ export const RowSeparator = () => {
   return <View style={styles.separator} />;
 };
 
-export const RowItem = ({ title, icon }) => {
+export const RowItem = ({ title, icon, onPress }) => {
   return (
-    <TouchableHighlight onPress={() => alert("Hello world")}>
+    <TouchableHighlight onPress={onPress}>
       <View style={styles.row}>
         <Text style={styles.text}>{title}</Text>
         <AntDesign name="meh" size={24} color="black" />

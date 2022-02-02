@@ -1,5 +1,12 @@
 import React from "react";
-import { View, StyleSheet, SafeAreaView, Linking, Text } from "react-native";
+import {
+  View,
+  StyleSheet,
+  SafeAreaView,
+  Linking,
+  Text,
+  Image,
+} from "react-native";
 import { RowItem, RowSeparator } from "../components/RowItems";
 import { AntDesign } from "@expo/vector-icons";
 const styles = StyleSheet.create({
@@ -20,6 +27,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginRight: 20,
   },
+  img: {
+    width: 500,
+    height: 400,
+  },
 });
 
 const openURL = (url) => {
@@ -31,31 +42,40 @@ export default ({ navigation }) => {
     <SafeAreaView>
       <View>
         <Text>
-          "You have a choice in which vacation you would like to go, where will
-          it be?"
+          Your ceremony is incredible, and you are now the leader of the NSO
+          (New Shark Order). The world is yours to conquer. This story is over,
+          but what's next for you?
         </Text>
+        <Image
+          style={styles.img}
+          source={{
+            uri: "https://i.pinimg.com/originals/a8/ff/a3/a8ffa3b96d81ab03c0b56cc724c93242.jpg",
+          }}
+        />
         <RowItem
-          title="Pick One of the Stories"
+          title="Kill all the humans"
           icon={<AntDesign name="Trophy" size={24} color="black" />}
-          onPress={() => navigation.push("Options2")}
+          onPress={() => navigation.push("King")}
         />
 
         <RowSeparator />
+
         <RowItem
-          title="Cancun"
+          title="Spare us please"
           icon={
             <AntDesign
               name="barcode"
               size={24}
               color="black"
-              onPress={() => navigation.push("Cancun")}
+              onPress={() => navigation.push("Options2")}
             />
           }
         />
 
         <RowSeparator />
+
         <RowItem
-          title="The Moon"
+          title="Story 3"
           icon={<AntDesign name="camera" size={24} color="black" />}
           onPress={() => navigation.push("Options2")}
         />

@@ -31,31 +31,34 @@ export default ({ navigation }) => {
     <SafeAreaView>
       <View>
         <Text>
-          "You have a choice in which vacation you would like to go, where will
-          it be?"
+          You eventually rack up 25 kills, and in a valient effort you and the
+          sharks have won the day. The king requests to see you in person. Do
+          you accept?
         </Text>
         <RowItem
-          title="Pick One of the Stories"
+          title="Yes I will meet him"
           icon={<AntDesign name="Trophy" size={24} color="black" />}
-          onPress={() => navigation.push("Options2")}
+          onPress={() => navigation.push("Meet")}
         />
 
         <RowSeparator />
+
         <RowItem
-          title="Cancun"
+          title="No he's not worth my time anymore"
           icon={
             <AntDesign
               name="barcode"
               size={24}
               color="black"
-              onPress={() => navigation.push("Cancun")}
+              onPress={() => navigation.push("Options2")}
             />
           }
         />
 
         <RowSeparator />
+
         <RowItem
-          title="The Moon"
+          title="Story 3"
           icon={<AntDesign name="camera" size={24} color="black" />}
           onPress={() => navigation.push("Options2")}
         />
